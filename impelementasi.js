@@ -1,12 +1,3 @@
-// Import dependencies
-const express = require('express');
-const app = express();
-const PORT = 3000;
-
-// Middleware for parsing JSON
-app.use(express.json());
-
-// Sample in-memory database
 let users = [];
 let products = [];
 let transactions = [];
@@ -37,7 +28,7 @@ app.delete('/users/:id', (req, res) => {
   res.status(204).send();
 });
 
-// Similar CRUD Endpoints for Products
+// CRUD Endpoints for Products
 app.get('/products', (req, res) => {
   res.json(products);
 });
